@@ -1,6 +1,6 @@
 # Chaitanya's Personal Website
 
-Source Code for my personal website
+Source Code for my [personal website](https://cpsquared.github.io/)
 
 ## Acknowledgements
 
