@@ -1,0 +1,540 @@
+/* * { border: 1px solid red; } */
+::-webkit-scrollbar { display: none; }
+
+
+
+@font-face {
+    font-family: CMU-Bright;
+    src: url("data/fonts/cmunbmr.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CMU-Bright-Semibold;
+    src: url("data/fonts/cmunbsr.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CMU-Sans-Serif;
+    src: url("data/fonts/cmunss.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CMU-Bright-Oblique;
+    src: url("data/fonts/cmunbmo.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CMU-Serif;
+    src: url("data/fonts/cmunrm.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CMU-Typewriter-Light;
+    src: url("data/fonts/cmunbtl.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html
+{
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+body
+{
+    position:absolute;
+
+    width:100%;
+    height: 100%;
+    padding: 0px;
+
+    overflow-y: scroll;
+
+    background-color: #FFFAEF;
+    color: #3D3D3D;
+
+    font-family: 'CMU-Bright', serif;
+    text-align: justify;
+}
+
+
+a
+{
+    text-decoration: none;
+    color: #D11D27;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #FBEBD8;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #D11D27;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #E53C38;
+    color: #FFFAEF;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #D11D27;
+  color: white;
+}
+
+.header
+{
+    position: relative;
+
+    width: 100%;
+    height: calc(250 / 900 * 100vh);
+
+}
+
+.header .name
+{
+    position: relative;
+    top: calc(60 / 900 * 100vh);
+    left: calc(80 / 1440 * 100vw);
+
+    width: calc(340 / 1440 * 90vw);
+
+    font-size: calc(36 / 900 * 100vh);
+    text-transform: capitalize;
+    font-family: 'CMU-Sans-Serif', sans-serif;
+}
+
+.header .links
+{
+    position: relative;
+    top: calc(60 / 900 * 100vh);
+    left: calc(80 / 1440 * 100vw);
+
+    width: calc(1200 / 1440 * 90vw);
+
+    font-family: 'CMU-Bright-Semibold', serif;
+    font-size: calc(20 / 900 * 100vh);
+    color: #999999;
+}
+
+.header .image
+{
+    position: absolute;
+    top: calc(50% - (100 / (1440 + 900) * (100vw + 100vh)));
+    right: calc(80 / 1440 * 100vw);
+
+    height: calc(200 / (1440 + 900) * (100vw + 100vh));
+    width: calc(200 / (1440 + 900) * (100vw + 100vh));
+
+    border-radius: calc(30 / (1440 + 900) * (100vw + 100vh));
+
+    background-image: url('data/images/profile.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about
+{
+    position: relative;
+    top: 0px;
+
+    width: calc(100% - (200 / 1440 * 100vw));
+
+    padding: calc(50 / 900 * 100vh) calc(100 / 1440 * 100vw);
+    font-size: calc(14 / 900 * 100vh);
+
+    border-bottom: 1px solid #999999;
+}
+
+.about img
+{
+    width: 100%;
+}
+
+.updates
+{
+    position: relative;
+    top: 0px;
+
+    width: calc(100% - (200 / 1440 * 100vw));
+
+    padding: calc(20 / 900 * 100vh) calc(100 / 1440 * 100vw);
+    font-family: CMU-Bright-Semibold;
+    font-size: calc(12 / 900 * 100vh);
+
+    border-bottom: 1px solid #999999;
+
+}
+.updates .heading
+{
+    color: #f2120b;
+    font-size: calc(22 / 900 * 100vh);
+    font-family: 'CMU-Sans-Serif', sans-serif;
+}
+
+.heading
+{
+    color: #f2120b;
+    font-family: 'CMU-Sans-Serif', sans-serif;
+}
+
+.main
+{
+    position: relative;
+
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 0px;
+}
+
+.main .body
+{
+    position: relative;
+    width: calc(100% - (200 / 1440 * 100vw));
+    padding: 0px 0px;
+}
+
+.main .body .research
+{
+    position: relative;
+    width: 100%;
+}
+
+.main .body .research .heading
+{
+    font-size: calc(22 / 900 * 100vh);
+}
+
+.main .body .research .textbox
+{
+    font-size: calc(12 / 900 * 100vh);
+    padding: calc(10 / 900 * 100vh) calc(50 / 1440 * 100vw);
+    border-bottom: 1px solid #999999;
+}
+
+.main .body .projects
+{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #999999;
+}
+
+.main .body .projects .heading
+{
+    font-size: calc(22 / 900 * 100vh);
+    padding: calc(10 / 900 * 100vh) 0px;
+}
+
+.main .body .projects .imagecontent
+{
+    position: relative;
+    width: 100%;
+    min-height: calc(160 / (1440 + 900) * (100vw + 100vh));;
+    margin: calc(15 / 900 * 100vh) 0px;
+}
+
+.main .body .projects .imagecontent .image
+{
+    position: absolute;
+
+    height: calc(150 / (1440 + 900) * (100vw + 100vh));
+    width: calc(150 / (1440 + 900) * (100vw + 100vh));
+
+    background-color: #ffffff;
+    border-radius: calc(30 / 900 * 100vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#SNOWMASS21
+{
+    background-image: url('data/images/snowmass21.png');
+    background-size: contain;
+}
+
+#LTR
+{
+    background-image: url('data/images/posterLTR.png');
+    background-size: contain;
+}
+
+#SU3roots
+{
+    background-image: url('data/images/SU3roots.png');
+    background-size: contain;
+}
+
+#VBFZH
+{
+    background-image: url('data/images/matrix7_ps.png');
+    background-size: contain;
+}
+
+#gggH1L
+{
+    background-image: url('data/images/gggH1L.png');
+    background-size: contain;
+}
+
+#Hadron
+{
+    background-image: url('data/images/cluster_hadro.png');
+    background-size: contain;
+}
+
+#IBP
+{
+    background-image: url('data/images/Loop_integral.png');
+    background-size: contain;
+}
+
+#ACAT
+{
+    background-image: url('data/images/ACAT2021.png');
+    background-size: contain;
+}
+
+#CUPC
+{
+    background-image: url('data/images/CUPC.png');
+    background-size: contain;
+}
+
+#Carleton
+{
+    background-image: url('data/images/Carleton.png');
+    background-size: contain;
+}
+
+#IFJ
+{
+    background-image: url('data/images/IFJ_PAN.png');
+    background-size: contain;
+}
+
+#KIT
+{
+    background-image: url('data/images/KIT_logo.png');
+    background-size: contain;
+}
+
+#Lie
+{
+    background-image: url('data/images/Georgi_book.jpeg');
+    background-size: contain;
+}
+
+#vprutil
+{
+    background-image: url('data/images/VPR_Util.jpg');
+    background-size: contain;
+}
+
+#airobject
+{
+    background-image: url('data/images/airobject.jpg');
+    background-size: contain;
+}
+
+#udet
+{
+    background-image: url('data/images/udet.jpg');
+    background-size: contain;
+}
+
+#gradslam
+{
+    background-image: url('data/images/gradslam.png');
+    background-size: contain;
+}
+
+#IBM
+{
+    background-image: url('data/images/IBM_Hack.png');
+    background-size: contain;
+}
+
+#twitter
+{
+    background-image: url(https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg);
+    background-size: contain;
+}
+
+#reddit
+{
+    background-image: url('data/images/reddit_flair.jpeg');
+    background-size: 100%;
+}
+
+#slamlogo
+{
+    background-image: url('data/images/slam_logo.png');
+    background-size: 100%;
+}
+
+#ras
+{
+    background-image: url('data/images/ras.png');
+    background-size: contain;
+}
+
+.main .body .projects .imagecontent .title
+{
+    position: relative;
+    left: calc(175 / (1440 + 900) * (100vw + 100vh));
+
+    width: calc(100% - (200 / (1440 + 900) * (100vw + 100vh)));
+
+    font-size: calc(18 / (1440 + 900) * (100vw + 100vh));
+    /* padding-top: calc(5 / 900 * 100vh); */
+    padding-left: calc(30 / 1440 * 100vw);
+}
+
+.main .body .projects .imagecontent .published
+{
+    position: relative;
+    left: calc(175 / (1440 + 900) * (100vw + 100vh));
+
+    width: calc(100% - (200 / (1440 + 900) * (100vw + 100vh)));
+
+    font-family: CMU-Sans-Serif;
+    font-size: calc(14 / (1440 + 900) * (100vw + 100vh));
+    padding-top: calc(5 / 900 * 100vh);
+    padding-left: calc(30 / 1440 * 100vw);
+}
+
+.main .body .projects .imagecontent .text
+{
+    position: relative;
+    left: calc(175 / (1440 + 900) * (100vw + 100vh));
+
+    width: calc(100% - (200 / (1440 + 900) * (100vw + 100vh)));
+
+    font-size: calc(12 / (1440 + 900) * (100vw + 100vh));
+    padding-top: calc(5 / 900 * 100vh);
+    padding-left: calc(30 / 1440 * 100vw);
+}
+
+.main .body .projects .imagecontent .author,
+.main .body .projects .imagecontent .company
+{
+    position: relative;
+    left: calc(175 / (1440 + 900) * (100vw + 100vh));
+
+    width: calc(100% - (200 / (1440 + 900) * (100vw + 100vh)));
+
+    font-family: 'CMU-Bright-Oblique';
+    font-size: calc(14 / (1440 + 900) * (100vw + 100vh));
+    padding-top: calc(5 / 900 * 100vh);
+    padding-left: calc(30 / 1440 * 100vw);
+}
+
+.main .body .projects .imagecontent .links
+{
+    position: relative;
+    left: calc(175 / (1440 + 900) * (100vw + 100vh));
+    width: calc(100% - (200 / (1440 + 900) * (100vw + 100vh)));
+
+    font-family: 'CMU-Typewriter-Light';
+    font-size: calc(14 / (1440 + 900) * (100vw + 100vh));
+    padding-top: calc(5 / 900 * 100vh);
+    padding-left: calc(30 / 1440 * 100vw);
+}
+.main .body .projects .imagecontent .links a
+{
+    color: #E53C38
+}
+
+.footer
+{
+    position: relative;
+
+    width: 100%;
+    height: calc(200 / 900 * 100vh);
+}
+
+.footer .name
+{
+    position: relative;
+    top: calc(60 / 900 * 100vh);
+    left: 0px;
+
+    width: 100%;
+
+    font-size: calc(20 / (1440 + 900) * (100vw + 100vh));
+
+    text-align: center;
+    font-family: 'CMU-Sans-Serif', sans-serif;
+}
+
+
+.footer .links
+{
+    position: relative;
+    top: calc(60 / 900 * 100vh);
+    left: 0px;
+
+    width: 100%;
+
+    font-family: 'CMU-Bright-Oblique', serif;
+    font-size: calc(14 / (1440 + 900) * (100vw + 100vh));
+    text-align: center;
+    color: #999999;
+}
+
+.footer .source
+{
+    position: absolute;
+    bottom: calc(10 / 900 * 100vh);
+    right: 0px;
+
+    font-size: calc(12 / (1440 + 900) * (100vw + 100vh));
+    color: #999999;
+}
+
+@media only screen and (min-width: 600px) {
+    body
+    {
+        width:100%;
+    }
+
+    .main .body
+    {
+        width: calc(100% - (200 / 1440 * 100vw));
+    }
+
+    .main .body .textbox
+    {
+        padding-right: calc(20 / 1440 * 100vw);
+    }
+}
