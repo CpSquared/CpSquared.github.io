@@ -288,6 +288,12 @@ a
     background-size: contain;
 }
 
+#RTALK
+{
+    background-image: url('data/images/research_talk.jpg');
+    background-size: contain;
+}
+
 #SU3roots
 {
     background-image: url('data/images/SU3roots.png');
